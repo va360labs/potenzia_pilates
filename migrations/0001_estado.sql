@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS pilates_state (
+  id INTEGER PRIMARY KEY,
+  data TEXT NOT NULL
+);

@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Tiene que coincidir con el nombre del proyecto en el panel o falla el build.
+  "name": "nucleo-pilates",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // Solo /api/* despierta al Worker; el resto son ficheros estáticos.
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "nucleo-pilates",
+      // El id lo da `npx wrangler d1 create nucleo-pilates` (o el panel: Storage & Databases → D1).
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

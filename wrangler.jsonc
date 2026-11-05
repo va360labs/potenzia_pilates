@@ -15,7 +15,7 @@
       "binding": "DB",
       "database_name": "nucleo-pilates",
       // El id lo da `npx wrangler d1 create nucleo-pilates` (o el panel: Storage & Databases → D1).
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "67bd4985-8153-4129-b1b6-391aa94b31a6",
       "migrations_dir": "migrations"
     }
   ]

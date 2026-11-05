@@ -4,6 +4,7 @@ import { postgresStore } from '../lib/store-postgres.js';
 // Vercel no tiene un servidor encendido: cada petición a /api/* enciende esta función
 // y se apaga al responder. El disco no dura entre peticiones, así que los datos viven
 // fuera, en Supabase (Postgres). La URL de conexión va en la variable DATABASE_URL.
+console.log('[api] DATABASE_URL presente:', !!process.env.DATABASE_URL, 'host:', (process.env.DATABASE_URL||'').split('@')[1]?.split('/')[0]);
 const store = postgresStore(process.env.DATABASE_URL);
 
 async function readBody(req) {
